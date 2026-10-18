@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <title>CareerScope — Jobs & Internships</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#eef2ff;--muted:#a4aec7;--panel:#111a30;--line:rgba(171,190,230,.16);--accent:#8b9bff;--mint:#6ee7c2}
+    *{box-sizing:border-box} body{margin:0;min-height:100vh;color:var(--ink);font-family:'DM Sans',sans-serif;background:radial-gradient(ellipse at 15% 0%,rgba(91,83,219,.25),transparent 38%),radial-gradient(ellipse at 90% 20%,rgba(32,160,169,.13),transparent 30%),#080d19}
+    h1,h2,h3,h4,.navbar-brand{font-family:Manrope,sans-serif;letter-spacing:-.035em} .navbar{background:rgba(8,13,25,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .navbar-brand{font-weight:800;color:#fff!important;font-size:1.2rem}.brand-mark{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,#7889ff,#49d7c3);color:#091022;margin-right:.55rem}
+    .nav-link{color:#b9c3da!important}.nav-link:hover{color:white!important}.hero{padding:4.8rem 0 3.2rem}.eyebrow{display:inline-flex;align-items:center;gap:.5rem;padding:.48rem .8rem;border:1px solid rgba(139,155,255,.3);border-radius:999px;background:rgba(91,105,220,.12);color:#cbd3ff;font-size:.8rem;font-weight:700}
+    .hero h1{font-size:clamp(2.45rem,6vw,4.6rem);font-weight:800;line-height:1.07;margin:1.2rem 0}.gradient-text{background:linear-gradient(100deg,#a8b4ff,#76f0d0);-webkit-background-clip:text;background-clip:text;color:transparent}.hero-copy{max-width:690px;color:var(--muted);font-size:1.07rem;line-height:1.8}
+    .glass{background:linear-gradient(145deg,rgba(19,29,52,.94),rgba(13,21,39,.94));border:1px solid var(--line);border-radius:24px;box-shadow:0 22px 70px rgba(0,0,0,.18)}.stat-card{height:100%;padding:1.1rem 1.25rem;border-radius:18px;border:1px solid var(--line);background:rgba(15,24,43,.75)}.stat-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:rgba(139,155,255,.14);color:#b8c1ff;font-size:1.15rem}.stat-label{font-size:.82rem;color:var(--muted)}.stat-value{font-family:Manrope;font-size:1.35rem;font-weight:800;margin-top:.35rem}
+    .section-kicker{color:#9eacff;font-weight:800;text-transform:uppercase;letter-spacing:.15em;font-size:.72rem}.section-title{font-weight:800}.form-label{font-size:.86rem;color:#d7def1;font-weight:700}.form-control,.form-select{background-color:#0b1325;color:#f4f6ff;border:1px solid #303d59;border-radius:12px;min-height:48px;padding:.72rem .9rem}.form-control::placeholder{color:#7886a3}.form-select:focus,.form-control:focus{background-color:#0b1325;color:#fff;border-color:#8b9bff;box-shadow:0 0 0 .22rem rgba(139,155,255,.15)}.form-select option{background:#0b1325;color:white}.btn-gradient{border:0;border-radius:13px;color:#0b1020;font-weight:800;background:linear-gradient(100deg,#a7b2ff,#72edce);min-height:50px;transition:transform .18s,filter .18s}.btn-gradient:hover{transform:translateY(-1px);filter:brightness(1.04);color:#0b1020}.btn-gradient:disabled{opacity:.55;transform:none}.fine-print{color:#8996b1;font-size:.78rem;line-height:1.6}
+    .result-toolbar{border-bottom:1px solid var(--line);padding-bottom:1.2rem;margin-bottom:1.3rem}.count-pill{border:1px solid var(--line);border-radius:999px;background:#101a30;color:#cdd5ea;padding:.45rem .8rem;font-size:.8rem}.job-card{height:100%;padding:1.25rem;border:1px solid var(--line);border-radius:19px;background:linear-gradient(150deg,rgba(21,32,56,.96),rgba(13,21,38,.96));transition:transform .2s,border-color .2s}.job-card:hover{transform:translateY(-4px);border-color:rgba(139,155,255,.48)}.job-title{font-size:1.05rem;font-weight:800;line-height:1.5}.company{color:#d5def3;font-weight:600}.muted{color:var(--muted)}.meta-row{display:flex;gap:.55rem;align-items:flex-start;color:#bac5dd;font-size:.85rem;line-height:1.5}.meta-row i{color:#9eacff;margin-top:.1rem}.tag{display:inline-flex;align-items:center;border-radius:999px;padding:.35rem .65rem;background:rgba(139,155,255,.12);border:1px solid rgba(139,155,255,.2);color:#cbd3ff;font-size:.72rem;font-weight:700}.tag-open{background:rgba(110,231,194,.1);border-color:rgba(110,231,194,.2);color:#83f0cf}.tag-neutral{background:rgba(164,174,199,.08);border-color:var(--line);color:#c2cce0}.job-description{font-size:.86rem;line-height:1.7;color:#aeb9d1}.job-footer{border-top:1px solid var(--line);padding-top:1rem;margin-top:auto}.btn-outline-soft{border:1px solid rgba(139,155,255,.45);color:#dce2ff;border-radius:11px;font-weight:700}.btn-outline-soft:hover{background:rgba(139,155,255,.12);color:#fff;border-color:#9eacff}.empty-state{padding:3.2rem 1.5rem;text-align:center;border:1px dashed rgba(164,174,199,.24);border-radius:20px;background:rgba(15,24,43,.5)}.empty-icon{width:62px;height:62px;margin:0 auto 1rem;border-radius:20px;display:grid;place-items:center;font-size:1.6rem;color:#aeb9ff;background:rgba(139,155,255,.12)}.spinner-border{color:#aab5ff}.status-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#70e7c4;margin-right:.45rem}.status-text{font-size:.78rem;color:#b6c2d9}.footer{border-top:1px solid var(--line);color:#7f8ca8}.small-link{color:#9eacff;text-decoration:none}.small-link:hover{color:#d9deff}
+    @media(max-width:575.98px){.hero{padding:3.2rem 0 2rem}.hero h1{font-size:2.55rem}.glass{border-radius:19px}.search-panel{padding:1.2rem!important}.job-card{padding:1.05rem}}
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container py-2"><a class="navbar-brand d-flex align-items-center" href="#top"><span class="brand-mark"><i class="bi bi-compass-fill"></i></span>CareerScope</a>
+    <button class="navbar-toggler border-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation"><i class="bi bi-list text-light fs-3"></i></button>
+    <div class="collapse navbar-collapse" id="navMenu"><div class="navbar-nav ms-auto align-items-lg-center gap-lg-3"><a class="nav-link" href="#search">Find opportunities</a><a class="nav-link" href="#results">Results</a><span class="nav-link"><span class="status-dot" id="navDot"></span><span id="navStatus">Ready to search</span></span></div></div>
+  </div>
+</nav>
+<main id="top" class="container">
+  <section class="hero text-center"><div class="eyebrow"><i class="bi bi-stars"></i> SMART WEB-POWERED OPPORTUNITY DISCOVERY</div>
+    <h1>Make your next move.<br><span class="gradient-text">Find work that fits.</span></h1>
+    <p class="hero-copy mx-auto">Explore internships and early-career roles from publicly accessible job pages. Search by skill, location, work mode and recency — with source links so you can verify each opportunity.</p>
+    <div class="row g-3 justify-content-center mt-4 text-start">
+      <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-icon"><i class="bi bi-globe2"></i></div><div class="stat-value">Multi-source</div><div class="stat-label">Public web discovery</div></div></div>
+      <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-icon"><i class="bi bi-calendar2-check"></i></div><div class="stat-value">Freshness</div><div class="stat-label">Filter recent posts</div></div></div>
+      <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-icon"><i class="bi bi-link-45deg"></i></div><div class="stat-value">Source links</div><div class="stat-label">Verify before applying</div></div></div>
+      <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-icon"><i class="bi bi-shield-check"></i></div><div class="stat-value">No fake data</div><div class="stat-label">Only returned listings</div></div></div>
+    </div>
+  </section>
+
+  <section id="search" class="glass search-panel p-4 p-lg-5 mb-5">
+    <div class="d-flex flex-column flex-md-row justify-content-between gap-3 mb-4"><div><div class="section-kicker mb-2">Opportunity search</div><h2 class="section-title h3 mb-2">Tell us what you're looking for</h2><p class="muted mb-0">Each click starts one TinyFish agent run. Status checks reuse that run.</p></div><div class="align-self-md-start"><span class="tag"><i class="bi bi-lightning-charge-fill me-1"></i> AI-assisted search</span></div></div>
+    <form id="searchForm" class="row g-3">
+      <div class="col-12 col-md-6"><label class="form-label" for="skillsInput">Role or skills</label><div class="input-group"><span class="input-group-text bg-transparent text-secondary border-secondary-subtle"><i class="bi bi-search"></i></span><input id="skillsInput" class="form-control" type="text" maxlength="120" value="Java Developer" placeholder="e.g. Java Developer, React Intern" required></div></div>
+      <div class="col-12 col-md-6"><label class="form-label" for="locationSelect">Preferred location</label><select id="locationSelect" class="form-select"><option>India</option><option>Noida</option><option>Delhi NCR</option><option>Bengaluru</option><option>Hyderabad</option><option>Mumbai</option><option>Pune</option><option>Remote / Anywhere</option><option>Anywhere</option></select></div>
+      <div class="col-12 col-md-4"><label class="form-label" for="modeSelect">Work arrangement</label><select id="modeSelect" class="form-select"><option value="Any">Any work mode</option><option value="Remote">Remote</option><option value="Hybrid">Hybrid</option><option value="On-site">On-site</option></select></div>
+      <div class="col-12 col-md-4"><label class="form-label" for="expSelect">Experience level</label><select id="expSelect" class="form-select"><option value="Fresher">Fresher / Student</option><option value="Entry Level">Entry level</option><option value="1-3 years">1–3 years</option></select></div>
+      <div class="col-12 col-md-4"><label class="form-label" for="typeSelect">Opportunity type</label><select id="typeSelect" class="form-select"><option value="Both">Internships + jobs</option><option value="Internship">Internships</option><option value="Job">Full-time jobs</option></select></div>
+      <div class="col-12 col-md-6"><label class="form-label" for="freshnessSelect">Posting date</label><select id="freshnessSelect" class="form-select"><option value="week">Prefer last 7 days</option><option value="24h">Prefer last 24 hours</option><option value="month">Prefer last 30 days</option><option value="any">Any date</option></select></div>
+      <div class="col-12 col-md-6 d-flex align-items-end"><button id="searchButton" class="btn btn-gradient w-100" type="submit"><i class="bi bi-stars me-2"></i>Find opportunities</button></div>
+      <div class="col-12"><div class="fine-print"><i class="bi bi-info-circle me-1"></i>Search results depend on publicly accessible pages and the agent's reach. Availability, stipend, dates and eligibility may be missing or stale; always verify them on the original source. A search may use paid TinyFish credits.</div></div>
+    </form>
+  </section>
+
+  <section id="results" class="pb-5 mb-4">
+    <div class="result-toolbar d-flex flex-column flex-sm-row justify-content-between align-items-sm-end gap-3"><div><div class="section-kicker mb-2">Your shortlist</div><h2 class="section-title h3 mb-1">Matching opportunities</h2><p class="muted mb-0">Open the source or application page to confirm details.</p></div><span id="resultCount" class="count-pill align-self-start align-self-sm-auto">0 results</span></div>
+    <div id="jobsContainer" class="row g-3" aria-live="polite"><div class="col-12"><div class="empty-state"><div class="empty-icon"><i class="bi bi-search"></i></div><h3 class="h5 fw-bold">Your next opportunity starts here</h3><p class="muted mb-0">Enter a role above and run a search to see matching listings.</p></div></div></div>
+  </section>
+</main>
+<footer class="footer py-4"><div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"><span>© <span id="year"></span> CareerScope · Jobs & internships discovery</span><span class="fine-print">Powered by TinyFish web automation · <a class="small-link" href="#search">Start a search ↑</a></span></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+'use strict';
+const form = document.getElementById('searchForm');
+const container = document.getElementById('jobsContainer');
+const button = document.getElementById('searchButton');
+const resultCount = document.getElementById('resultCount');
+const navStatus = document.getElementById('navStatus');
+const navDot = document.getElementById('navDot');
+let searchInProgress = false;
+let activeRunId = null;
+document.getElementById('year').textContent = new Date().getFullYear();
+
+function setStatus(message, color='#70e7c4') { navStatus.textContent = message; navDot.style.background = color; }
+function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
+function showMessage(title, detail, isError=false) {
+  container.replaceChildren(); const col=document.createElement('div'); col.className='col-12';
+  const box=document.createElement('div'); box.className='empty-state';
+  const icon=document.createElement('div'); icon.className='empty-icon'; icon.innerHTML=isError?'<i class="bi bi-exclamation-triangle"></i>':'<i class="bi bi-info-circle"></i>';
+  const h=document.createElement('h3'); h.className='h5 fw-bold'; h.textContent=title;
+  const p=document.createElement('p'); p.className='muted mb-0'; p.textContent=detail;
+  box.append(icon,h,p); col.append(box); container.append(col);
+}
+function textNode(tag, className, value) { const el=document.createElement(tag); el.className=className||''; el.textContent=(value===null||value===undefined||String(value).trim()==='')?'Not provided':String(value); return el; }
+function safeUrl(value) { try { const u=new URL(String(value)); return ['http:','https:'].includes(u.protocol)?u.href:null; } catch (_) { return null; } }
+function normalizeJobs(value, depth=0) {
+  if(depth>5) return [];
+  if(typeof value==='string') { try{return normalizeJobs(JSON.parse(value),depth+1);}catch(_){const m=value.match(/\[[\s\S]*\]/);if(m){try{return normalizeJobs(JSON.parse(m[0]),depth+1);}catch(__){}}return [];} }
+  if(Array.isArray(value)) return value.filter(x=>x&&typeof x==='object'&&!Array.isArray(x));
+  if(value&&typeof value==='object') { for(const k of ['jobs','opportunities','results','postings','items','data','result','output','response','content','text']) {if(value[k]!==undefined){const found=normalizeJobs(value[k],depth+1);if(found.length)return found;}} }
+  return [];
+}
+function addMeta(card, icon, label, value) {
+  if(value===undefined||value===null||String(value).trim()==='') return;
+  const row=document.createElement('div'); row.className='meta-row'; const i=document.createElement('i'); i.className='bi '+icon; const span=document.createElement('span'); span.textContent=label?label+': '+value:String(value); row.append(i,span); card.append(row);
+}
+function renderJobs(raw) {
+  const jobs=normalizeJobs(raw); container.replaceChildren();
+  if(!jobs.length){resultCount.textContent='0 results';showMessage('No structured listings returned','The agent completed, but did not return a readable list of jobs. Try a broader role or check the run in TinyFish.');return;}
+  resultCount.textContent=`${jobs.length} result${jobs.length===1?'':'s'}`;
+  let shown=0;
+  jobs.forEach(job=>{
+    const title=job.title||job.role||job.position; const company=job.company||job.company_name||job.employer;
+    if(!title&&!company) return;
+    shown++; const col=document.createElement('div');col.className='col-12 col-md-6 col-xl-4';
+    const card=document.createElement('article');card.className='job-card d-flex flex-column gap-3';
+    const top=document.createElement('div');top.className='d-flex flex-wrap gap-2';
+    const type=textNode('span','tag',job.type||job.opportunity_type||'Opportunity');top.append(type);
+    const availability=String(job.availability||'').trim();
+    if(availability){const tag=textNode('span','tag '+(/open|accepting|available/i.test(availability)?'tag-open':'tag-neutral'),availability);top.append(tag);}
+    card.append(top);
+    card.append(textNode('h3','job-title mb-0',title||'Opportunity title not provided'));
+    card.append(textNode('div','company',company||'Company not provided'));
+    addMeta(card,'bi-geo-alt','Location',job.location);
+    addMeta(card,'bi-laptop','Work mode',job.work_mode||job.mode);
+    addMeta(card,'bi-cash-coin','Stipend / salary',job.stipend_salary||job.salary||job.compensation);
+    addMeta(card,'bi-calendar-event','Posted',job.posted_date||job.date_posted);
+    addMeta(card,'bi-hourglass-split','Apply by',job.application_deadline||job.deadline);
+    addMeta(card,'bi-person-check','Eligibility',job.eligibility);
+    const desc=job.description||job.summary;if(desc)card.append(textNode('p','job-description mb-0',String(desc).slice(0,420)+(String(desc).length>420?'…':'')));
+    const sourceUrl=safeUrl(job.source_url||job.job_url||job.url);const applyUrl=safeUrl(job.apply_link||job.application_url)||sourceUrl;
+    const footer=document.createElement('div');footer.className='job-footer';
+    const source=document.createElement('div');source.className='small muted mb-3';source.textContent='Source: '+(job.source_name|| (sourceUrl?new URL(sourceUrl).hostname:'Not provided'));footer.append(source);
+    if(sourceUrl||applyUrl){const links=document.createElement('div');links.className='d-flex gap-2';if(sourceUrl){const a=document.createElement('a');a.href=sourceUrl;a.target='_blank';a.rel='noopener noreferrer';a.className='btn btn-outline-soft btn-sm flex-fill';a.innerHTML='<i class="bi bi-box-arrow-up-right me-1"></i>Source';links.append(a);}if(applyUrl){const a=document.createElement('a');a.href=applyUrl;a.target='_blank';a.rel='noopener noreferrer';a.className='btn btn-gradient btn-sm flex-fill d-flex align-items-center justify-content-center';a.innerHTML='Apply / Details <i class="bi bi-arrow-up-right ms-1"></i>';links.append(a);}footer.append(links);}else{footer.append(textNode('div','fine-print','No source link was returned. Verify this listing before relying on it.'));}
+    card.append(footer);col.append(card);container.append(col);
+  });
+  if(!shown){resultCount.textContent='0 results';showMessage('No usable listings found','The returned data did not include a job title or company. Try another search.');}
+}
+async function readResponse(response){const raw=await response.text();let data;try{data=JSON.parse(raw);}catch(_){throw new Error(`Server returned an invalid response (HTTP ${response.status}). Check that Flask is running.`);}if(!response.ok||data.error){let msg=data.error||`HTTP ${response.status}`;if(data.details)msg+=' — '+data.details;throw new Error(msg);}return data;}
+async function pollExistingRun(runId){const maxAttempts=60;for(let i=1;i<=maxAttempts;i++){setStatus(`Checking same run · ${i}/${maxAttempts}`,'#f5c46b');const response=await fetch(`/api/search-jobs/status/${encodeURIComponent(runId)}`);const data=await readResponse(response);const status=String(data.status||'unknown').toLowerCase();if(status==='completed')return data;if(['failed','cancelled','canceled','timed_out'].includes(status))throw new Error(data.message||`Agent run ended: ${status}`);if(status==='unknown')throw new Error(data.message||'Run status is unknown. Check TinyFish history before retrying.');if(i<maxAttempts)await sleep(5000);}throw new Error(`This run is taking longer than expected. Run ID: ${runId}. You can safely check this same run later; do not start another search yet.`);}
+form.addEventListener('submit',async event=>{
+  event.preventDefault();if(searchInProgress)return;
+  const skills=document.getElementById('skillsInput').value.trim();if(!skills){showMessage('Enter a role or skill','Please enter a job title or skill before searching.',true);return;}
+  // One intentional POST per click. No automatic resubmission if the outcome is uncertain.
+  searchInProgress=true;activeRunId=null;button.disabled=true;button.innerHTML='<span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>Searching the web…';resultCount.textContent='Searching';
+  container.replaceChildren();const col=document.createElement('div');col.className='col-12';const state=document.createElement('div');state.className='empty-state';const spin=document.createElement('div');spin.className='spinner-border mb-3';spin.setAttribute('role','status');const h=document.createElement('h3');h.className='h5 fw-bold';h.textContent='TinyFish is searching public job pages';const p=document.createElement('p');p.className='muted mb-0';p.textContent='We will check the status of this same run. No second search is being submitted.';state.append(spin,h,p);col.append(state);container.append(col);
+  try{setStatus('Starting one agent run','#f5c46b');let data=await readResponse(await fetch('/api/search-jobs',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({skills,location:document.getElementById('locationSelect').value,mode:document.getElementById('modeSelect').value,experience:document.getElementById('expSelect').value,roleType:document.getElementById('typeSelect').value,freshness:document.getElementById('freshnessSelect').value})}));
+    if(['running','pending','queued','in_progress'].includes(String(data.status||'').toLowerCase())){if(!data.run_id)throw new Error(data.message||'No run ID returned. Check TinyFish history before trying again.');activeRunId=data.run_id;data=await pollExistingRun(activeRunId);}
+    const finalStatus=String(data.status||'').toLowerCase();if(finalStatus==='failed')throw new Error(data.message||'TinyFish run failed.');renderJobs(data.result??data.output??data.jobs??[]);setStatus('Search finished','#70e7c4');
+  }catch(error){console.error('Opportunity search:',error);showMessage('Search could not be completed',error.message||'Unexpected error. Check the TinyFish dashboard before retrying.',true);setStatus('Search needs attention','#ff7f91');}
+  finally{searchInProgress=false;button.disabled=false;button.innerHTML='<i class="bi bi-stars me-2"></i>Find opportunities';}
+});
+// Lightweight local health check only; it does not call the paid TinyFish endpoint.
+fetch('/health').then(r=>r.json()).then(d=>{if(!d.tinyfish_key_configured)setStatus('Add API key in .env','#f5c46b');}).catch(()=>setStatus('Backend not reachable','#ff7f91'));
+</script>
+</body>
+</html>
